@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 import openpyxl
 import csv
-
+#get data from excel file
 wb = openpyxl.load_workbook('G:/hoc/DANH SÁCH  XẾP LỚP 10 TẠM THỜI  NĂM HỌC 2021-2022.xlsx')
 sheet = wb['Table 1']
 SbdList = []
@@ -25,9 +25,9 @@ for i in range(5, 283):
 #print(SbdList)
 #print(len(SbdList))
 subString = "Tổng điểm XT: "
-
+#open edge
 browser = webdriver.Edge(executable_path="msedgedriver.exe")
-
+#access to link
 browser.get("http://xemdiem.hanoimoi.com.vn/")
 cBoxLop10 = Select(browser.find_element_by_id("type"))
 cBoxLop10.select_by_value('1')
